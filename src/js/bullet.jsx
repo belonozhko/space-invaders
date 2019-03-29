@@ -3,10 +3,15 @@ import { Player } from "./player.jsx";
 export class Bullet extends Player {
 
     constructor(x, y, w, h) {
+        super(x, y, w, h)
+
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
+
+        var canvas = document.getElementById("mainCanvas");
+        var ctx = canvas.getContext("2d");
 
         this.show = function () {
             ctx.fillStyle = "blue";

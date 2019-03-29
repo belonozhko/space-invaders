@@ -18,10 +18,11 @@ export class Enemy extends Player{
         var ctx = canvas.getContext("2d");
 
         this.show = function(){
-            ctx.drawImage(picEnemy, this.x, this.y)
+            // if ()
+            // ctx.drawImage(picEnemy, this.x, this.y)
 
-            // ctx.fillStyle = "yellow";
-            // ctx.fillRect(this.x,this.y,this.w,this.h);
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(this.x,this.y,this.w,this.h);
         }
 
         this.move = function(speed){
@@ -31,8 +32,8 @@ export class Enemy extends Player{
         }
 
         this.clear = function(){
-            ctx.removeImage(picEnemy, this.x, this.y)
-            // ctx.clearRect(this.x,this.y,this.w,this.h);
+            // ctx.removeImage(picEnemy, this.x, this.y)
+            ctx.clearRect(this.x,this.y,this.w,this.h);
         }
     }
 }
