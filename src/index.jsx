@@ -8,6 +8,7 @@ function game() {
     document.getElementById("play").style.visibility = "hidden";
 
     var canvas = document.getElementById("mainCanvas");
+    var ctx = canvas.getContext("2d");
 
     var playerOne = new Player(canvas.width /2, canvas.height -20, 20, 20);
     var bullets = [];
@@ -66,11 +67,11 @@ function game() {
     function lost() {
         setInterval(function () {
             ctx.fillStyle = "red";
-            ctx.font = "80px Fjalla One";
+            ctx.font = "80px Arial";
             ctx.fillText("GAME OVER", 0, 100);
-            ctx.font = "24px Fjalla One";
+            ctx.font = "24px Arial";
             ctx.fillText("Your Score Was: " + score, 0, 150);
-            ctx.font = "24px Fjalla One";
+            ctx.font = "24px Arial";
             ctx.fillText("Your Killed: " + level + " Enemies", 0, 200);
         }, 50);
     }
