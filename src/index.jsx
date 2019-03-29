@@ -7,6 +7,8 @@ import {Player} from './js/player.jsx'
 function game() {
     document.getElementById("play").style.visibility = "hidden";
 
+    var canvas = document.getElementById("mainCanvas");
+
     var playerOne = new Player(canvas.width /2, canvas.height -20, 20, 20);
     var bullets = [];
     var enemies = [];
